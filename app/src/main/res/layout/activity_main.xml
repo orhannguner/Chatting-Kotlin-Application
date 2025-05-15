@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <androidx.appcompat.widget.Toolbar
+       android:id="@+id/mainToolbar"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:layout_marginTop="20dp"
+       android:background="?attr/colorPrimary"
+       android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/userRecycler"
+       android:layout_width="match_parent"
+       android:layout_height="200dp"
+       tools:listitem="@layout/user_layout"
+       app:layout_constraintTop_toBottomOf="@id/mainToolbar"
+       app:layout_constraintStart_toStartOf="parent"
+
+       android:layout_marginTop="50dp"
+       app:layout_constraintEnd_toEndOf="parent"/>
+
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/btnBul"
+      app:layout_constraintTop_toBottomOf="@id/userRecycler"
+      android:textColor="@color/white"
+      android:text="ARKADAŞ BUL"
+      app:layout_constraintStart_toStartOf="@id/userRecycler"
+      app:layout_constraintEnd_toEndOf="@id/userRecycler"
+      android:layout_marginTop="50dp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
